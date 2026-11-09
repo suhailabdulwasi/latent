@@ -1,0 +1,6 @@
+node_modules
+dist
+data.db*
+jobs-cache.json
+owner-key.hash
+.env*
