@@ -1,4 +1,4 @@
-# Latent
+# Latent Job Board
 
 Job board I built for ML, AI engineering, and data science roles, mostly at startups. I got tired of checking a bunch of different career pages every day so this pulls them all into one place and keeps itself updated.
 
@@ -21,6 +21,7 @@ React + TypeScript + Vite, Tailwind, shadcn/ui on the frontend. Express + Drizzl
 ## Run it
 
 ```
+cd job-board
 npm install
 npm run dev
 ```
