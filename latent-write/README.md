@@ -29,7 +29,7 @@ scripts for their input paths before running them.
 
 - Commit and push completed work each session.
 - Keep unapproved experimental model changes on a review branch.
-- Keep the user as commit author and include the Perplexity co-author trailer.
+- Keep the user's authorship intact; do not add assistant co-author credits.
 - Publishing to the live site requires separate explicit authorization.
 - Verify training and runtime feature parity, human false flags, and meaning
   preservation before promoting a retrained model.
