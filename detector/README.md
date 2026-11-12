@@ -4,4 +4,6 @@ Scores how likely a piece of text is AI-written and highlights the sentences tha
 
 Part of Latent Write, live at https://latentwrite.pplx.app
 
-Code coming soon.
+The shared app source is in [`../latent-write/`](../latent-write/).
+Scoring lives in `shared/core.ts`, the client model in
+`client/src/data/model.json`, and the training pipeline in `training/`.

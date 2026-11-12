@@ -1,0 +1,64 @@
+{
+ "external": {
+  "n": 680,
+  "rows": [
+   {
+    "name": "Latent Write",
+    "url": null,
+    "auc": 0.974561403508772,
+    "auc_no_hc3": 0.9772543916720884,
+    "caught": 0.6657894736842105,
+    "caught_modern": 0.67,
+    "false_flag": 0.006666666666666667
+   },
+   {
+    "name": "Fakespot RoBERTa",
+    "url": "https://huggingface.co/fakespot-ai/roberta-base-ai-text-detection-v1",
+    "auc": 0.9368333333333332,
+    "auc_no_hc3": 0.9197397527651269,
+    "caught": 0.9289473684210526,
+    "caught_modern": 0.875,
+    "false_flag": 0.2966666666666667,
+    "caught_at_latent_ff": 0.5868421052631579
+   },
+   {
+    "name": "HC3 ChatGPT RoBERTa",
+    "url": "https://huggingface.co/Hello-SimpleAI/chatgpt-detector-roberta",
+    "auc": 0.7379649122807017,
+    "auc_no_hc3": 0.6470006506180872,
+    "caught": 0.5789473684210527,
+    "caught_modern": 0.305,
+    "false_flag": 0.23333333333333334,
+    "caught_at_latent_ff": 0.2868421052631579
+   }
+  ]
+ },
+ "humanizer": {
+  "n": 120,
+  "n_llm": 60,
+  "rows": [
+   {
+    "name": "Latent Write",
+    "before": 0.7083333333333334,
+    "after_rules": 0.475,
+    "llm_before": 0.8,
+    "after_llm": 0.4
+   },
+   {
+    "name": "Fakespot RoBERTa",
+    "before": 0.8333333333333334,
+    "after_rules": 0.6583333333333333,
+    "llm_before": 0.8333333333333334,
+    "after_llm": 0.7
+   },
+   {
+    "name": "HC3 ChatGPT RoBERTa",
+    "before": 0.2833333333333333,
+    "after_rules": 0.225,
+    "llm_before": 0.26666666666666666,
+    "after_llm": 0.45
+   }
+  ],
+  "note": "Humanizer settings: Standard tone, Strong; the site tries ten rewrite variants and keeps the one its own detector scores lowest. All texts are from the held-out test split. The full-rewrite test used a different random set of 60 modern-chatbot texts, so its starting rate differs. Because Latent's detector is tuned to rarely flag people, edited text slides under its cutoff more easily than under a detector that flags aggressively."
+ }
+}

@@ -1,0 +1,2080 @@
+{
+ "holdout_model": "grok_4_3",
+ "threshold": 0.8843338415474152,
+ "thresholds": [
+  {
+   "max_words": 80,
+   "threshold": 0.9222633812638845
+  },
+  {
+   "max_words": 150,
+   "threshold": 0.899254243526327
+  },
+  {
+   "max_words": 300,
+   "threshold": 0.7846122509165031
+  },
+  {
+   "max_words": 1000000000,
+   "threshold": 0.8686036413092605
+  }
+ ],
+ "unclear_low": 0.09436949253549798,
+ "vocab": 30000,
+ "human_weight": 2.0,
+ "target": 0.007,
+ "overall": {
+  "n": 5163,
+  "n_ai": 1715,
+  "n_human": 3448,
+  "ai_caught": 0.6425655976676384,
+  "human_false_flag": 0.0063805104408352666,
+  "accuracy": 0.8770094906062367,
+  "auc": 0.9761663498677562
+ },
+ "ai_model": {
+  "HC3 (older models)": {
+   "n": 663,
+   "n_ai": 663,
+   "n_human": 0,
+   "ai_caught": 0.7677224736048266,
+   "accuracy": 0.7677224736048266
+  },
+  "MAGE (older models)": {
+   "n": 722,
+   "n_ai": 722,
+   "n_human": 0,
+   "ai_caught": 0.5083102493074793,
+   "accuracy": 0.5083102493074793
+  },
+  "RAID (older models)": {
+   "n": 144,
+   "n_ai": 144,
+   "n_human": 0,
+   "ai_caught": 0.6597222222222222,
+   "accuracy": 0.6597222222222222
+  },
+  "claude_haiku_4_5": {
+   "n": 36,
+   "n_ai": 36,
+   "n_human": 0,
+   "ai_caught": 0.9166666666666666,
+   "accuracy": 0.9166666666666666
+  },
+  "claude_sonnet_5_5": {
+   "n": 41,
+   "n_ai": 41,
+   "n_human": 0,
+   "ai_caught": 0.6341463414634146,
+   "accuracy": 0.6341463414634146
+  },
+  "gemini_3_flash": {
+   "n": 41,
+   "n_ai": 41,
+   "n_human": 0,
+   "ai_caught": 0.5121951219512195,
+   "accuracy": 0.5121951219512195
+  },
+  "gpt5_mini": {
+   "n": 36,
+   "n_ai": 36,
+   "n_human": 0,
+   "ai_caught": 0.75,
+   "accuracy": 0.75
+  },
+  "gpt_5_1": {
+   "n": 32,
+   "n_ai": 32,
+   "n_human": 0,
+   "ai_caught": 0.75,
+   "accuracy": 0.75
+  }
+ },
+ "human_domain": {
+  "Enron email: email": {
+   "n": 362,
+   "n_ai": 0,
+   "n_human": 362,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "HC3: finance": {
+   "n": 106,
+   "n_ai": 0,
+   "n_human": 106,
+   "human_false_flag": 0.009433962264150943,
+   "accuracy": 0.9905660377358491
+  },
+  "HC3: medicine": {
+   "n": 126,
+   "n_ai": 0,
+   "n_human": 126,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "HC3: open_qa": {
+   "n": 48,
+   "n_ai": 0,
+   "n_human": 48,
+   "human_false_flag": 0.020833333333333332,
+   "accuracy": 0.9791666666666666
+  },
+  "HC3: reddit_eli5": {
+   "n": 128,
+   "n_ai": 0,
+   "n_human": 128,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "HC3: wiki_csai": {
+   "n": 111,
+   "n_ai": 0,
+   "n_human": 111,
+   "human_false_flag": 0.018018018018018018,
+   "accuracy": 0.9819819819819819
+  },
+  "IvyPanda: student essay": {
+   "n": 316,
+   "n_ai": 0,
+   "n_human": 316,
+   "human_false_flag": 0.015822784810126583,
+   "accuracy": 0.9841772151898734
+  },
+  "MAGE: cmv": {
+   "n": 187,
+   "n_ai": 0,
+   "n_human": 187,
+   "human_false_flag": 0.0053475935828877,
+   "accuracy": 0.9946524064171123
+  },
+  "MAGE: cnn": {
+   "n": 36,
+   "n_ai": 0,
+   "n_human": 36,
+   "human_false_flag": 0.027777777777777776,
+   "accuracy": 0.9722222222222222
+  },
+  "MAGE: dialogsum": {
+   "n": 28,
+   "n_ai": 0,
+   "n_human": 28,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "MAGE: eli5": {
+   "n": 194,
+   "n_ai": 0,
+   "n_human": 194,
+   "human_false_flag": 0.010309278350515464,
+   "accuracy": 0.9896907216494846
+  },
+  "MAGE: imdb": {
+   "n": 35,
+   "n_ai": 0,
+   "n_human": 35,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "MAGE: pubmed": {
+   "n": 27,
+   "n_ai": 0,
+   "n_human": 27,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "MAGE: sci": {
+   "n": 190,
+   "n_ai": 0,
+   "n_human": 190,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "MAGE: tldr": {
+   "n": 213,
+   "n_ai": 0,
+   "n_human": 213,
+   "human_false_flag": 0.014084507042253521,
+   "accuracy": 0.9859154929577465
+  },
+  "MAGE: wp": {
+   "n": 218,
+   "n_ai": 0,
+   "n_human": 218,
+   "human_false_flag": 0.009174311926605505,
+   "accuracy": 0.9908256880733946
+  },
+  "MAGE: xsum": {
+   "n": 199,
+   "n_ai": 0,
+   "n_human": 199,
+   "human_false_flag": 0.010050251256281407,
+   "accuracy": 0.9899497487437185
+  },
+  "MAGE: yelp": {
+   "n": 169,
+   "n_ai": 0,
+   "n_human": 169,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "RAID: abstracts": {
+   "n": 121,
+   "n_ai": 0,
+   "n_human": 121,
+   "human_false_flag": 0.008264462809917356,
+   "accuracy": 0.9917355371900827
+  },
+  "RAID: poetry": {
+   "n": 114,
+   "n_ai": 0,
+   "n_human": 114,
+   "human_false_flag": 0.008771929824561403,
+   "accuracy": 0.9912280701754386
+  },
+  "Reddit: r/240sx": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ADHD": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AdviceAnimals": {
+   "n": 8,
+   "n_ai": 0,
+   "n_human": 8,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Anarchism": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Anarcho_Capitalism": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Android": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AnimalCrossing": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AppleWatch": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AskElectronics": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AskHistorians": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AskMen": {
+   "n": 5,
+   "n_ai": 0,
+   "n_human": 5,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AskReddit": {
+   "n": 120,
+   "n_ai": 0,
+   "n_human": 120,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/AskWomen": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Atlanta": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/BPD": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/BeautyGuruChat": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Borderlands2": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Braveryjerk": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/BurningMan": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/CFB": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/CollegeBasketball": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/DJs": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/DarkNetMarkets": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/DaystromInstitute": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/DestinyTheGame": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Diablo": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/DoesAnybodyElse": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/DotA2": {
+   "n": 5,
+   "n_ai": 0,
+   "n_human": 5,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Drugs": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/EA_FIFA": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/EDC": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/EQNext": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ElectricalEngineering": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/EmeraldPS2": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/EngineeringStudents": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/EnoughLibertarianSpam": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Etsy": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Eve": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Filmmakers": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Fitness": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Foodforthought": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/FordRaptor": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Futurology": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/GameDealsMeta": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Games": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/GirlGamers": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/GlobalOffensive": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/GreenBayPackers": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Guildwars2": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Guitar": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Gunners": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/HailCorporate": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Hawken": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/IAmA": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/IWantToLearn": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ImGoingToHellForThis": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/InsightfulQuestions": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/JonTron": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/KerbalSpaceProgram": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/KotakuInAction": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/LawSchool": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Libertarian": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/LifeProTips": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/LivestreamFails": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/MLPLounge": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/MMA": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/MURICA": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/MakeupAddiction": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/MapPorn": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Maplestory": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Massdrop": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/MensRights": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Minecraft": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Naruto": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/NeutralPolitics": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/NewToTF2": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Nexus5": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Nightshift": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/NoStupidQuestions": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PS3": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PS4": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Parenting": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PhilosophyofScience": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PipeTobacco": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Planetside": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PlantedTank": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PublicFreakout": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/PuzzleAndDragons": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Random_Acts_Of_Amazon": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Smite": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/SquaredCircle": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Stargate": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/The100": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/TheGirlSurvivalGuide": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/TheRedPill": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/TrollXChromosomes": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Trove": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/TrueFilm": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/TwoXChromosomes": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/Volkswagen": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/WTF": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/WeAreTheMusicMakers": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/WildStar": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/YouShouldKnow": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/apple": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/askscience": {
+   "n": 5,
+   "n_ai": 0,
+   "n_human": 5,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/asktransgender": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/asoiaf": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/assassinscreed": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/atheism": {
+   "n": 5,
+   "n_ai": 0,
+   "n_human": 5,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/australia": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/aww": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/backpacking": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/badroommates": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/baseball": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/batman": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/bayarea": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/bestof": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/bicycling": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/bjj": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/blackops2": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/bloodborne": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/books": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/bootroom": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/boston": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/breakingmom": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/breastfeeding": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/buildapc": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/canada": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/cars": {
+   "n": 5,
+   "n_ai": 0,
+   "n_human": 5,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/casualiama": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/cats": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/changemyview": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/conspiracy": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/crossfit": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/csgobetting": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/cyanogenmod": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/darksouls": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/dating_advice": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/dayz": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/depression": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/diablo3": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/dogecoin": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/drums": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/dust514": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/dwarffortress": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/electronics": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/entwives": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/environment": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/europe": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/evedreddit": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/explainlikeimfive": {
+   "n": 10,
+   "n_ai": 0,
+   "n_human": 10,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/fffffffuuuuuuuuuuuu": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ffxiv": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/food": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/freemasonry": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/funny": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/gaming": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/gay": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/golf": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/gonewild": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/guitarlessons": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/guns": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/hardstyle": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/hearthstone": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/heroesofthestorm": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/history": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/hockey": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/htcone": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/hyperlightdrifter": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/idleraiders": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/indieheads": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/intj": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/introvert": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ipad": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/istp": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/kancolle": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/kandi": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/leagueoflegends": {
+   "n": 19,
+   "n_ai": 0,
+   "n_human": 19,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/learnprogramming": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/linux": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/magicTCG": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/malefashionadvice": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/martialarts": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/marvelstudios": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/masseffect": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/mentalhealth": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/mexico": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/mindcrack": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/minecraftsuggestions": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/misc": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/mormon": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/motorcycles": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/movies": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/mturk": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/mylittlepony": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/nba": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/newfoundland": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/news": {
+   "n": 6,
+   "n_ai": 0,
+   "n_human": 6,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/olympics": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/oregon": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ottawa": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/pathofexile": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/personalfinance": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/pettyrevenge": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/pics": {
+   "n": 6,
+   "n_ai": 0,
+   "n_human": 6,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/pittsburgh": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/pokemon": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/politics": {
+   "n": 8,
+   "n_ai": 0,
+   "n_human": 8,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/privacy": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/reddevils": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/reddit.com": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/relationship_advice": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/relationships": {
+   "n": 4,
+   "n_ai": 0,
+   "n_human": 4,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ronpaul": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/rpg": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/science": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/sex": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/short": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/singularity": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/skyrim": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/smashbros": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/soccer": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/space": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/spaceengine": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/starcraft": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/stevens": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/summonerschool": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/sweden": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/sysadmin": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/technology": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/techsupportmacgyver": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/teenagers": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/teslamotors": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/tf2": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/thesims": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/tifu": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/todayilearned": {
+   "n": 7,
+   "n_ai": 0,
+   "n_human": 7,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/trees": {
+   "n": 3,
+   "n_ai": 0,
+   "n_human": 3,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/triathlon": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/truegaming": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/ultrahardcore": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/undelete": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/videos": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/webdev": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/wicked_edge": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/worldnews": {
+   "n": 2,
+   "n_ai": 0,
+   "n_human": 2,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/wow": {
+   "n": 5,
+   "n_ai": 0,
+   "n_human": 5,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "Reddit: r/wowguilds": {
+   "n": 1,
+   "n_ai": 0,
+   "n_human": 1,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  }
+ },
+ "length": {
+  "150-299": {
+   "n": 1400,
+   "n_ai": 509,
+   "n_human": 891,
+   "ai_caught": 0.8487229862475442,
+   "human_false_flag": 0.007856341189674524,
+   "accuracy": 0.94,
+   "auc": 0.9925912696050221
+  },
+  "30-79": {
+   "n": 1856,
+   "n_ai": 547,
+   "n_human": 1309,
+   "ai_caught": 0.39488117001828155,
+   "human_false_flag": 0.007639419404125287,
+   "accuracy": 0.8162715517241379,
+   "auc": 0.9467461240770199
+  },
+  "300+": {
+   "n": 331,
+   "n_ai": 75,
+   "n_human": 256,
+   "ai_caught": 0.88,
+   "human_false_flag": 0.0078125,
+   "accuracy": 0.9667673716012085,
+   "auc": 0.9983854166666667
+  },
+  "80-149": {
+   "n": 1576,
+   "n_ai": 584,
+   "n_human": 992,
+   "ai_caught": 0.6643835616438356,
+   "human_false_flag": 0.0030241935483870967,
+   "accuracy": 0.873730964467005,
+   "auc": 0.9795659798939461
+  }
+ },
+ "source": {
+  "Enron email": {
+   "n": 362,
+   "n_ai": 0,
+   "n_human": 362,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  },
+  "HC3": {
+   "n": 1182,
+   "n_ai": 663,
+   "n_human": 519,
+   "ai_caught": 0.7677224736048266,
+   "human_false_flag": 0.007707129094412331,
+   "accuracy": 0.8663282571912013,
+   "auc": 0.9808338927686088
+  },
+  "IvyPanda": {
+   "n": 316,
+   "n_ai": 0,
+   "n_human": 316,
+   "human_false_flag": 0.015822784810126583,
+   "accuracy": 0.9841772151898734
+  },
+  "Latent-gen": {
+   "n": 186,
+   "n_ai": 186,
+   "n_human": 0,
+   "ai_caught": 0.7043010752688172,
+   "accuracy": 0.7043010752688172
+  },
+  "MAGE": {
+   "n": 2218,
+   "n_ai": 722,
+   "n_human": 1496,
+   "ai_caught": 0.5083102493074793,
+   "human_false_flag": 0.007352941176470588,
+   "accuracy": 0.8349864743011722,
+   "auc": 0.9562415749477832
+  },
+  "RAID": {
+   "n": 379,
+   "n_ai": 144,
+   "n_human": 235,
+   "ai_caught": 0.6597222222222222,
+   "human_false_flag": 0.00851063829787234,
+   "accuracy": 0.8654353562005277,
+   "auc": 0.9839243498817967
+  },
+  "Reddit": {
+   "n": 520,
+   "n_ai": 0,
+   "n_human": 520,
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
+  }
+ },
+ "unseen_model": {
+  "n": 280,
+  "n_ai": 280,
+  "n_human": 0,
+  "ai_caught": 0.625,
+  "accuracy": 0.625
+ }
+}
