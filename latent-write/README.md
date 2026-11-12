@@ -2,8 +2,9 @@
 
 Shared source for the detector, humanizer, and Accuracy page at
 [latentwrite.pplx.app](https://latentwrite.pplx.app).
-This main-branch snapshot preserves the previously published implementation;
-the returned Muse retrain is reviewed separately before any live update.
+This review branch contains the returned Muse retrain, not the published
+implementation. See [`handoff/REVIEW.md`](handoff/REVIEW.md) for verified
+results and release blockers. `main` preserves the earlier source snapshot.
 
 ## Development
 

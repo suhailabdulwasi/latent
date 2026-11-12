@@ -99,6 +99,23 @@ export function charGrams(t: string): string[] {
   return out;
 }
 
+// Topic-blind character grams: the same masking the n-gram model already uses
+// (non-keep words become shape tokens like "<w-ing>"), applied before the
+// char featurizer. This is the retrain path for the char model's topic bias:
+// train on these grams (see training/featurize.ts + handoff/RETRAIN.md) and the
+// char model can no longer learn "these letter patterns = AI" from essay
+// vocabulary. NOT used by score(): the shipped model.json was trained on raw
+// char grams, and scoring masked text with that vocabulary raises the human
+// false-flag rate on held-out text (2.0% vs 0.67% — measured in
+// handoff/exp_masked.ts) because the old weights were fit for raw grams.
+export function charGramsMasked(t: string): string[] {
+  const masked = t.replace(/[a-z]+(?:'[a-z]+)?/g, (w) => {
+    const lower = w.toLowerCase();
+    return keepSet().has(lower) ? w : shape(lower);
+  });
+  return charGrams(masked);
+}
+
 // Words and phrases that show up far more often in AI-generated text.
 export const AI_PHRASES: string[] = [
   "delve", "delves", "delving", "tapestry", "testament", "multifaceted", "realm", "landscape",

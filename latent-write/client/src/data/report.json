@@ -1,93 +1,93 @@
 {
  "holdout_model": "grok_4_3",
- "threshold": 0.8843338415474152,
+ "threshold": 0.9416971581908945,
  "thresholds": [
   {
    "max_words": 80,
-   "threshold": 0.9222633812638845
+   "threshold": 0.9498562667830156
   },
   {
    "max_words": 150,
-   "threshold": 0.899254243526327
+   "threshold": 0.9427327285186363
   },
   {
    "max_words": 300,
-   "threshold": 0.7846122509165031
+   "threshold": 0.8371331584300292
   },
   {
    "max_words": 1000000000,
-   "threshold": 0.8686036413092605
+   "threshold": 0.9442756529143603
   }
  ],
- "unclear_low": 0.09436949253549798,
+ "unclear_low": 0.20122353072680807,
  "vocab": 30000,
- "human_weight": 2.0,
+ "human_weight": 1.0,
  "target": 0.007,
  "overall": {
   "n": 5163,
   "n_ai": 1715,
   "n_human": 3448,
-  "ai_caught": 0.6425655976676384,
-  "human_false_flag": 0.0063805104408352666,
-  "accuracy": 0.8770094906062367,
-  "auc": 0.9761663498677562
+  "ai_caught": 0.6565597667638484,
+  "human_false_flag": 0.0069605568445475635,
+  "accuracy": 0.8812705791206663,
+  "auc": 0.9739503358519411
  },
  "ai_model": {
   "HC3 (older models)": {
    "n": 663,
    "n_ai": 663,
    "n_human": 0,
-   "ai_caught": 0.7677224736048266,
-   "accuracy": 0.7677224736048266
+   "ai_caught": 0.7903469079939668,
+   "accuracy": 0.7903469079939668
   },
   "MAGE (older models)": {
    "n": 722,
    "n_ai": 722,
    "n_human": 0,
-   "ai_caught": 0.5083102493074793,
-   "accuracy": 0.5083102493074793
+   "ai_caught": 0.5277008310249307,
+   "accuracy": 0.5277008310249307
   },
   "RAID (older models)": {
    "n": 144,
    "n_ai": 144,
    "n_human": 0,
-   "ai_caught": 0.6597222222222222,
-   "accuracy": 0.6597222222222222
+   "ai_caught": 0.6875,
+   "accuracy": 0.6875
   },
   "claude_haiku_4_5": {
    "n": 36,
    "n_ai": 36,
    "n_human": 0,
-   "ai_caught": 0.9166666666666666,
-   "accuracy": 0.9166666666666666
+   "ai_caught": 0.8611111111111112,
+   "accuracy": 0.8611111111111112
   },
   "claude_sonnet_5_5": {
    "n": 41,
    "n_ai": 41,
    "n_human": 0,
-   "ai_caught": 0.6341463414634146,
-   "accuracy": 0.6341463414634146
+   "ai_caught": 0.6097560975609756,
+   "accuracy": 0.6097560975609756
   },
   "gemini_3_flash": {
    "n": 41,
    "n_ai": 41,
    "n_human": 0,
-   "ai_caught": 0.5121951219512195,
-   "accuracy": 0.5121951219512195
+   "ai_caught": 0.5365853658536586,
+   "accuracy": 0.5365853658536586
   },
   "gpt5_mini": {
    "n": 36,
    "n_ai": 36,
    "n_human": 0,
-   "ai_caught": 0.75,
-   "accuracy": 0.75
+   "ai_caught": 0.6111111111111112,
+   "accuracy": 0.6111111111111112
   },
   "gpt_5_1": {
    "n": 32,
    "n_ai": 32,
    "n_human": 0,
-   "ai_caught": 0.75,
-   "accuracy": 0.75
+   "ai_caught": 0.6875,
+   "accuracy": 0.6875
   }
  },
  "human_domain": {
@@ -95,8 +95,8 @@
    "n": 362,
    "n_ai": 0,
    "n_human": 362,
-   "human_false_flag": 0.0,
-   "accuracy": 1.0
+   "human_false_flag": 0.0027624309392265192,
+   "accuracy": 0.9972375690607734
   },
   "HC3: finance": {
    "n": 106,
@@ -123,22 +123,22 @@
    "n": 128,
    "n_ai": 0,
    "n_human": 128,
-   "human_false_flag": 0.0,
-   "accuracy": 1.0
+   "human_false_flag": 0.0078125,
+   "accuracy": 0.9921875
   },
   "HC3: wiki_csai": {
    "n": 111,
    "n_ai": 0,
    "n_human": 111,
-   "human_false_flag": 0.018018018018018018,
-   "accuracy": 0.9819819819819819
+   "human_false_flag": 0.04504504504504504,
+   "accuracy": 0.954954954954955
   },
   "IvyPanda: student essay": {
    "n": 316,
    "n_ai": 0,
    "n_human": 316,
-   "human_false_flag": 0.015822784810126583,
-   "accuracy": 0.9841772151898734
+   "human_false_flag": 0.006329113924050633,
+   "accuracy": 0.9936708860759493
   },
   "MAGE: cmv": {
    "n": 187,
@@ -193,22 +193,22 @@
    "n": 213,
    "n_ai": 0,
    "n_human": 213,
-   "human_false_flag": 0.014084507042253521,
-   "accuracy": 0.9859154929577465
+   "human_false_flag": 0.009389671361502348,
+   "accuracy": 0.9906103286384976
   },
   "MAGE: wp": {
    "n": 218,
    "n_ai": 0,
    "n_human": 218,
-   "human_false_flag": 0.009174311926605505,
-   "accuracy": 0.9908256880733946
+   "human_false_flag": 0.013761467889908258,
+   "accuracy": 0.9862385321100917
   },
   "MAGE: xsum": {
    "n": 199,
    "n_ai": 0,
    "n_human": 199,
-   "human_false_flag": 0.010050251256281407,
-   "accuracy": 0.9899497487437185
+   "human_false_flag": 0.0,
+   "accuracy": 1.0
   },
   "MAGE: yelp": {
    "n": 169,
@@ -221,15 +221,15 @@
    "n": 121,
    "n_ai": 0,
    "n_human": 121,
-   "human_false_flag": 0.008264462809917356,
-   "accuracy": 0.9917355371900827
+   "human_false_flag": 0.01652892561983471,
+   "accuracy": 0.9834710743801653
   },
   "RAID: poetry": {
    "n": 114,
    "n_ai": 0,
    "n_human": 114,
-   "human_false_flag": 0.008771929824561403,
-   "accuracy": 0.9912280701754386
+   "human_false_flag": 0.017543859649122806,
+   "accuracy": 0.9824561403508771
   },
   "Reddit: r/240sx": {
    "n": 1,
@@ -1980,37 +1980,37 @@
    "n": 1400,
    "n_ai": 509,
    "n_human": 891,
-   "ai_caught": 0.8487229862475442,
-   "human_false_flag": 0.007856341189674524,
-   "accuracy": 0.94,
-   "auc": 0.9925912696050221
+   "ai_caught": 0.8840864440078585,
+   "human_false_flag": 0.010101010101010102,
+   "accuracy": 0.9514285714285714,
+   "auc": 0.991656358388513
   },
   "30-79": {
    "n": 1856,
    "n_ai": 547,
    "n_human": 1309,
-   "ai_caught": 0.39488117001828155,
+   "ai_caught": 0.42230347349177333,
    "human_false_flag": 0.007639419404125287,
-   "accuracy": 0.8162715517241379,
-   "auc": 0.9467461240770199
+   "accuracy": 0.8243534482758621,
+   "auc": 0.9431191456140375
   },
   "300+": {
    "n": 331,
    "n_ai": 75,
    "n_human": 256,
-   "ai_caught": 0.88,
-   "human_false_flag": 0.0078125,
-   "accuracy": 0.9667673716012085,
-   "auc": 0.9983854166666667
+   "ai_caught": 0.76,
+   "human_false_flag": 0.0,
+   "accuracy": 0.945619335347432,
+   "auc": 0.9969270833333334
   },
   "80-149": {
    "n": 1576,
    "n_ai": 584,
    "n_human": 992,
    "ai_caught": 0.6643835616438356,
-   "human_false_flag": 0.0030241935483870967,
-   "accuracy": 0.873730964467005,
-   "auc": 0.9795659798939461
+   "human_false_flag": 0.005040322580645161,
+   "accuracy": 0.8724619289340102,
+   "auc": 0.978164355943438
   }
  },
  "source": {
@@ -2018,49 +2018,49 @@
    "n": 362,
    "n_ai": 0,
    "n_human": 362,
-   "human_false_flag": 0.0,
-   "accuracy": 1.0
+   "human_false_flag": 0.0027624309392265192,
+   "accuracy": 0.9972375690607734
   },
   "HC3": {
    "n": 1182,
    "n_ai": 663,
    "n_human": 519,
-   "ai_caught": 0.7677224736048266,
-   "human_false_flag": 0.007707129094412331,
-   "accuracy": 0.8663282571912013,
-   "auc": 0.9808338927686088
+   "ai_caught": 0.7903469079939668,
+   "human_false_flag": 0.015414258188824663,
+   "accuracy": 0.8756345177664975,
+   "auc": 0.9803253152454103
   },
   "IvyPanda": {
    "n": 316,
    "n_ai": 0,
    "n_human": 316,
-   "human_false_flag": 0.015822784810126583,
-   "accuracy": 0.9841772151898734
+   "human_false_flag": 0.006329113924050633,
+   "accuracy": 0.9936708860759493
   },
   "Latent-gen": {
    "n": 186,
    "n_ai": 186,
    "n_human": 0,
-   "ai_caught": 0.7043010752688172,
-   "accuracy": 0.7043010752688172
+   "ai_caught": 0.6559139784946236,
+   "accuracy": 0.6559139784946236
   },
   "MAGE": {
    "n": 2218,
    "n_ai": 722,
    "n_human": 1496,
-   "ai_caught": 0.5083102493074793,
-   "human_false_flag": 0.007352941176470588,
-   "accuracy": 0.8349864743011722,
-   "auc": 0.9562415749477832
+   "ai_caught": 0.5277008310249307,
+   "human_false_flag": 0.006016042780748663,
+   "accuracy": 0.842200180342651,
+   "auc": 0.9545871168915817
   },
   "RAID": {
    "n": 379,
    "n_ai": 144,
    "n_human": 235,
-   "ai_caught": 0.6597222222222222,
-   "human_false_flag": 0.00851063829787234,
-   "accuracy": 0.8654353562005277,
-   "auc": 0.9839243498817967
+   "ai_caught": 0.6875,
+   "human_false_flag": 0.01702127659574468,
+   "accuracy": 0.8707124010554089,
+   "auc": 0.9815898345153664
   },
   "Reddit": {
    "n": 520,
@@ -2074,7 +2074,7 @@
   "n": 280,
   "n_ai": 280,
   "n_human": 0,
-  "ai_caught": 0.625,
-  "accuracy": 0.625
+  "ai_caught": 0.5285714285714286,
+  "accuracy": 0.5285714285714286
  }
 }

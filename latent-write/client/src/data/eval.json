@@ -5,11 +5,11 @@
    {
     "name": "Latent Write",
     "url": null,
-    "auc": 0.974561403508772,
-    "auc_no_hc3": 0.9772543916720884,
-    "caught": 0.6657894736842105,
-    "caught_modern": 0.67,
-    "false_flag": 0.006666666666666667
+    "auc": 0.9662,
+    "auc_no_hc3": 0.9666,
+    "caught": 0.65,
+    "caught_modern": 0.62,
+    "false_flag": 0.01
    },
    {
     "name": "Fakespot RoBERTa",
@@ -34,13 +34,13 @@
   ]
  },
  "humanizer": {
-  "n": 120,
+  "n": 186,
   "n_llm": 60,
   "rows": [
    {
     "name": "Latent Write",
-    "before": 0.7083333333333334,
-    "after_rules": 0.475,
+    "before": 0.645,
+    "after_rules": 0.339,
     "llm_before": 0.8,
     "after_llm": 0.4
    },
@@ -59,6 +59,6 @@
     "after_llm": 0.45
    }
   ],
-  "note": "Humanizer settings: Standard tone, Strong; the site tries ten rewrite variants and keeps the one its own detector scores lowest. All texts are from the held-out test split. The full-rewrite test used a different random set of 60 modern-chatbot texts, so its starting rate differs. Because Latent's detector is tuned to rarely flag people, edited text slides under its cutoff more easily than under a detector that flags aggressively."
+  "note": "Humanizer settings: Standard tone, Strong; the site tries ten rewrite variants and keeps the one its own detector scores lowest. All texts are from the held-out test split. The full-rewrite test used a different random set of 60 modern-chatbot texts, so its starting rate differs. Because Latent's detector is tuned to rarely flag people, edited text slides under its cutoff more easily than under a detector that flags aggressively. The full-AI-rewrite columns for Latent Write were scored with the previous detector version (the rewrite texts were not in the training-data package); the humanizer columns use the current detector."
  }
 }

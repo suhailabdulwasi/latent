@@ -131,6 +131,57 @@ const SWAPS: Swap[] = [
   [/\bbecause of\b/gi, ["because of"], ["because of"], ["due to"], "Common AI patterns", 3],
 ];
 
+// Char-aware synonyms (strength 3 only): words whose letter patterns the char
+// model leans on most (measured with handoff/diag_char.ts on held-out AI text),
+// replaced only where a genuinely interchangeable synonym exists. Words with
+// no safe synonym (kitchen, semester in most contexts, systemic...) are
+// deliberately left out — swapping them would change the meaning, and the
+// char signal is diffuse enough that a few swaps only help when the word is
+// repeated, as in the "learning from failure" sample (curiosity / failure /
+// feedback). "Professor" is not swapped before a capitalised name ("Professor
+// Smith" must stay a title).
+const CHAR_SYN: [RegExp, string[], string][] = [
+  [/\bcuriosity\b/gi, ["interest"], "Char-hot synonyms"],
+  [/\bcurious\b/gi, ["interested", "intrigued"], "Char-hot synonyms"],
+  [/\bfeedback\b/gi, ["input"], "Char-hot synonyms"],
+  [/\bfailure\b/gi, ["setback"], "Char-hot synonyms"],
+  [/\bfailures\b/gi, ["setbacks"], "Char-hot synonyms"],
+  [/\bmissteps\b/gi, ["mistakes"], "Char-hot synonyms"],
+  [/\bhighlights\b/gi, ["shows"], "Char-hot synonyms"],
+  [/\bprofessor\b(?!\s+[A-Z])/gi, ["teacher", "lecturer"], "Char-hot synonyms"],
+  [/\bsemester\b/gi, ["term"], "Char-hot synonyms"],
+  [/\bclassroom\b/gi, ["class"], "Char-hot synonyms"],
+  [/\bclassmates\b/gi, ["peers", "fellow students"], "Char-hot synonyms"],
+  [/\binstructors\b/gi, ["teachers"], "Char-hot synonyms"],
+  [/\bassignment\b/gi, ["task"], "Char-hot synonyms"],
+  [/\bassignments\b/gi, ["tasks"], "Char-hot synonyms"],
+  [/\bhonestly\b/gi, ["frankly", "truthfully"], "Char-hot synonyms"],
+  [/\bexcited\b/gi, ["thrilled", "eager"], "Char-hot synonyms"],
+  [/\beager\b/gi, ["keen", "excited"], "Char-hot synonyms"],
+  [/\bfrustrated\b/gi, ["annoyed"], "Char-hot synonyms"],
+  [/\bfrustration\b/gi, ["annoyance"], "Char-hot synonyms"],
+  [/\bargue\b/gi, ["say"], "Char-hot synonyms"],
+  [/\bhiring\b/gi, ["recruiting"], "Char-hot synonyms"],
+  [/\bdeadline\b/gi, ["due date"], "Char-hot synonyms"],
+  [/\bdeadlines\b/gi, ["due dates"], "Char-hot synonyms"],
+  [/\baccountability\b/gi, ["responsibility"], "Char-hot synonyms"],
+  [/\bworkforce\b/gi, ["staff"], "Char-hot synonyms"],
+  [/\bcoursework\b/gi, ["classwork"], "Char-hot synonyms"],
+  [/\bgenuinely\b/gi, ["really", "truly"], "Char-hot synonyms"],
+  [/\bskeptical\b/gi, ["doubtful"], "Char-hot synonyms"],
+  [/\brecommendation\b/gi, ["suggestion"], "Char-hot synonyms"],
+  [/\bimportantly\b/gi, ["notably"], "Char-hot synonyms"],
+  [/\btension\b/gi, ["friction"], "Char-hot synonyms"],
+  [/\burban\b/gi, ["city"], "Char-hot synonyms"],
+  [/\bstreets\b/gi, ["roads"], "Char-hot synonyms"],
+  [/\bquietly\b/gi, ["softly"], "Char-hot synonyms"],
+  [/\bcontributing\b/gi, ["adding"], "Char-hot synonyms"],
+  [/\bmolecules\b/gi, ["particles"], "Char-hot synonyms"],
+  [/\bgrandmother\b/gi, ["grandma"], "Char-hot synonyms"],
+  [/\bgenuine\b/gi, ["real"], "Char-hot synonyms"],
+  [/\binternship\b/gi, ["placement"], "Char-hot synonyms"],
+];
+
 // Sentence-initial transitions that AI text overuses.
 const TRANSITIONS: [RegExp, string[], string][] = [
   [/^(?:additionally|furthermore|moreover|in addition),\s*/i, ["", "Also, ", "Plus, ", "And "], "Overused transitions"],
@@ -230,6 +281,15 @@ export function humanize(input: string, opt: HumanizeOptions): HumanizeResult {
       const mLead = (m.match(/^[, ]+/) || [""])[0], cLead = (c.match(/^[, ]+/) || [""])[0];
       return (cLead || mLead) + matchCase(m.slice(mLead.length), c.slice(cLead.length));
     });
+  }
+  // 3b. Char-hot synonyms (strength 3 only): see CHAR_SYN above.
+  if (opt.strength === 3) {
+    for (const [re, pool, label] of CHAR_SYN) {
+      t = t.replace(re, (m) => {
+        bump(label);
+        return matchCase(m, pool[Math.floor(r() * pool.length)]);
+      });
+    }
   }
   // Serial (Oxford) comma: "A, B, and C" → "A, B and C"
   t = t.replace(/(, [A-Za-z'-]+(?: [A-Za-z'-]+){0,2}), (and|or) (?=[a-z])/g, (_m, a: string, cj: string) => { bump("Serial commas"); return a + " " + cj + " "; });
@@ -359,7 +419,7 @@ export function humanize(input: string, opt: HumanizeOptions): HumanizeResult {
   // sentence-opening words that can be safely lowercased).
   {
     const POOL: Record<Tone, string[]> = {
-      casual: ["I think", "honestly", "I mean", "to me", "kind of"],
+      casual: ["I think", "I mean", "to me", "kind of"],
       standard: ["I think", "in practice", "actually", "to me"],
       academic: ["arguably", "in practice", "in many cases", "broadly speaking", "in general"],
     };
