@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="popup">
+  <h1>LatentFill</h1>
+  <div class="hint" id="setupHint"></div>
+  <button class="big" id="run">Autofill this page</button>
+  <div class="status" id="status"></div>
+  <div id="details"></div>
+  <div class="teach">
+    <label for="teach">Teach LatentFill</label>
+    <textarea id="teach" class="prose" placeholder="e.g. I started at UVA in August 2023 and graduate May 2027."></textarea>
+    <button class="secondary" id="teachBtn">Remember this</button>
+    <span class="status" id="teachStatus"></span>
+  </div>
+  <div class="foot"><span id="stats"></span><a id="settings">Settings</a></div>
+  <div class="hint" id="memCount"></div>
+  <div class="hint">Shortcut: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>. Green = filled, amber = check this one.</div>
+  <script src="popup.js"></script>
+</body></html>

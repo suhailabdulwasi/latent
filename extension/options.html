@@ -1,0 +1,122 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LatentFill Settings</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="wrap">
+  <h1>LatentFill settings</h1>
+  <p class="hint">Everything is stored only in this browser. Your resume and form questions go straight from your browser to the AI provider you choose.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">1. AI provider</h2>
+    <label for="provider">Provider</label>
+    <select id="provider">
+      <option value="openai">OpenAI</option>
+      <option value="anthropic">Anthropic (Claude)</option>
+      <option value="gemini">Google Gemini (has a free tier)</option>
+      <option value="openai_compatible">OpenAI-compatible (OpenRouter, Groq, Ollama, LM Studio...)</option>
+    </select>
+    <div id="baseUrlRow" hidden>
+      <label for="baseUrl">Base URL</label>
+      <input type="text" id="baseUrl" placeholder="http://localhost:11434/v1">
+    </div>
+    <label for="apiKey">API key</label>
+    <input type="password" id="apiKey" placeholder="Paste your key" autocomplete="off">
+    <label for="model">Model</label>
+    <input type="text" id="model">
+    <p class="hint">Leave blank for the default shown. A small, fast model works well and costs fractions of a cent per application.</p>
+    <div class="row"><button class="secondary" id="testKey">Test connection</button><span class="status" id="keyStatus"></span></div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">2. Resume</h2>
+    <label for="resumeFile">Resume file (attached to upload fields automatically)</label>
+    <input type="file" id="resumeFile" accept=".pdf,.doc,.docx">
+    <p class="hint" id="resumeFileInfo">No file saved.</p>
+    <label for="resumeText">Resume text</label>
+    <p class="hint">Optional if you uploaded a PDF. Parsing fills this in for you.</p>
+    <textarea id="resumeText" class="prose" placeholder="Paste your resume as plain text"></textarea>
+    <div class="row" style="margin-top:10px"><button id="parse">Parse resume with AI</button><span class="status" id="parseStatus"></span></div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">3. Standard answers</h2>
+    <p class="hint">Questions your resume can't answer. Leave anything blank to have it skipped and flagged for you.</p>
+    <div class="row">
+      <div style="flex:1;min-width:200px"><label>Authorized to work in the US?</label><select data-path="workAuthorization.authorizedToWorkInUS"><option value="">-</option><option>Yes</option><option>No</option></select></div>
+      <div style="flex:1;min-width:200px"><label>Need visa sponsorship (now or future)?</label><select data-path="workAuthorization.requiresSponsorship"><option value="">-</option><option>Yes</option><option>No</option></select></div>
+    </div>
+    <div class="row">
+      <div style="flex:1;min-width:200px"><label>Desired salary</label><input type="text" data-path="preferences.desiredSalary" placeholder="e.g. $120,000"></div>
+      <div style="flex:1;min-width:200px"><label>Notice period / start</label><input type="text" data-path="preferences.noticePeriod" placeholder="e.g. 2 weeks"></div>
+    </div>
+    <div class="row">
+      <div style="flex:1;min-width:200px"><label>Willing to relocate?</label><select data-path="preferences.willingToRelocate"><option value="">-</option><option>Yes</option><option>No</option></select></div>
+      <div style="flex:1;min-width:200px"><label>Remote preference</label><input type="text" data-path="preferences.remotePreference" placeholder="e.g. Remote or hybrid"></div>
+    </div>
+    <div class="row">
+      <div style="flex:1"><label>U.S. citizen?</label><select data-path="workAuthorization.usCitizen"><option value="">-</option><option>Yes</option><option>No</option></select></div>
+      <div style="flex:1"><label>Agree to a drug-free workplace?</label><select data-path="standardAnswers.agreesToDrugFreeWorkplace"><option value="">-</option><option>Yes</option><option>No</option></select></div>
+    </div>
+    <h2>Voluntary self-identification (EEO)</h2>
+    <p class="hint">Blank = "Decline to self-identify" where that option exists.</p>
+    <div class="row">
+      <div style="flex:1;min-width:200px"><label>Gender</label><input type="text" data-path="eeo.gender"></div>
+      <div style="flex:1;min-width:200px"><label>Pronouns</label><input type="text" data-path="eeo.pronouns"></div>
+    </div>
+    <div class="row">
+      <div style="flex:1;min-width:200px"><label>Hispanic / Latino?</label><input type="text" data-path="eeo.hispanicLatino"></div>
+      <div style="flex:1;min-width:200px"><label>Race / ethnicity</label><input type="text" data-path="eeo.race"></div>
+    </div>
+    <div class="row">
+      <div style="flex:1;min-width:200px"><label>Veteran status</label><input type="text" data-path="eeo.veteranStatus"></div>
+      <div style="flex:1;min-width:200px"><label>Disability status</label><input type="text" data-path="eeo.disabilityStatus"></div>
+    </div>
+    <label for="notes">Other notes for the AI</label>
+    <textarea id="notes" class="prose" placeholder="e.g. Heard about jobs via LinkedIn. Prefer to be called Abdul. Graduating May 2027. Open to contract roles."></textarea>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Cover letter</h2>
+    <p class="hint">When an application asks for a cover letter, autofill writes one in your format, tailored to that job, and attaches it as a PDF. It's saved here so you can review or edit it. You can also open a job in another tab and generate one manually.</p>
+    <label class="check"><input type="checkbox" id="autoCoverLetter"> Write cover letters automatically during autofill</label>
+    <label for="coverLetterTemplate">Your cover-letter format</label>
+    <textarea id="coverLetterTemplate" class="prose" style="min-height:220px"></textarea>
+    <button id="generateCoverLetter" class="secondary">Generate from job tab</button>
+    <span id="coverStatus" class="status"></span>
+    <label for="coverLetterDraft">Cover-letter draft</label>
+    <textarea id="coverLetterDraft" class="prose" style="min-height:350px"></textarea>
+    <p id="coverJob" class="hint"></p>
+    <button id="downloadCoverLetter" class="secondary">Download PDF</button>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">4. Profile (advanced)</h2>
+    <p class="hint">The structured data the AI fills forms from. Created by "Parse resume", and you can edit it directly.</p>
+    <textarea id="profile" style="min-height:260px"></textarea>
+    <label class="check"><input type="checkbox" id="overwrite"> Overwrite fields that already have a value</label>
+    <label class="check"><input type="checkbox" id="autoNextPage"> Keep filling automatically on the next pages of an application</label>
+    <label class="check"><input type="checkbox" id="preciseDropdowns"> Precise dropdown mode (sends real keystrokes to dropdowns; Chrome briefly shows a "started debugging this browser" bar while filling)</label>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">5. Memory</h2>
+    <p class="hint">LatentFill keeps learning. Facts you teach it and answers you correct or submit are saved here and used on every future application, and they take priority over the resume.</p>
+    <label for="newFact">Teach a fact</label>
+    <div class="row"><input type="text" id="newFact" style="flex:1" placeholder="e.g. I started my BS in Computer Science at UVA in August 2023."><button id="addFact">Remember</button></div>
+    <h2>Facts</h2>
+    <input type="text" id="memSearch" placeholder="Search memory">
+    <ul class="mem-list" id="factList"></ul>
+    <h2>Learned answers</h2>
+    <ul class="mem-list" id="answerList"></ul>
+    <div class="row" style="margin-top:10px">
+      <button class="secondary" id="exportMem">Export memory</button>
+      <button class="secondary" id="importMem">Import memory</button>
+      <input type="file" id="importFile" accept=".json" hidden>
+      <button class="secondary" id="clearMem">Clear all memory</button>
+      <span class="status" id="memStatus"></span>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:18px"><button id="save">Save settings</button><span class="status" id="saveStatus"></span></div>
+</div>
+<script src="llm.js"></script>
+<script src="cover-letter.js"></script>
+<script src="options.js"></script>
+</body></html>
